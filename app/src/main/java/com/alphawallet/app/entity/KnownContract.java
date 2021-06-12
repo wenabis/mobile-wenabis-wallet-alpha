@@ -11,15 +11,15 @@ public class KnownContract {
     @Expose
     private List<UnknownToken> mainNet = null;
 
-    @SerializedName("xDAI")
+    @SerializedName("Binance")
     @Expose
-    private List<UnknownToken> xDAI = null;
+    private List<UnknownToken> Binance = null;
 
     public List<UnknownToken> getMainNet() {
         return mainNet;
     }
 
-    public List<UnknownToken> getXDAI() {
-        return xDAI;
+    public List<UnknownToken> getBinance() {
+        return Binance;
     }
 }

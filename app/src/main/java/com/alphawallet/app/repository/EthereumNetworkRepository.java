@@ -15,9 +15,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.alphawallet.ethereum.EthereumNetworkBase.BINANCE_MAIN_ID;
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
-import static com.alphawallet.ethereum.EthereumNetworkBase.MATIC_ID;
-import static com.alphawallet.ethereum.EthereumNetworkBase.XDAI_ID;
 
 public class EthereumNetworkRepository extends EthereumNetworkBase
 {
@@ -32,7 +31,7 @@ public class EthereumNetworkRepository extends EthereumNetworkBase
 
     public static List<Integer> addDefaultNetworks()
     {
-        return new ArrayList<>(Arrays.asList(MAINNET_ID, XDAI_ID, MATIC_ID));
+        return new ArrayList<>(Arrays.asList(MAINNET_ID, BINANCE_MAIN_ID));
     }
 
     public static String getNodeURLByNetworkId(int networkId) {
@@ -65,18 +64,20 @@ public class EthereumNetworkRepository extends EthereumNetworkBase
         KnownContract knownContract = readContracts();
         if (knownContract == null) return;
 
+        if (networkFilters == null || networkFilters.contains(BINANCE_MAIN_ID))
+        {
+            for (UnknownToken unknownToken: knownContract.getBinance())
+            {
+                popularTokens.put(unknownToken.address.toLowerCase(), new ContractLocator(unknownToken.address, BINANCE_MAIN_ID));
+            }
+        }
+
+
         if (networkFilters == null || networkFilters.contains(MAINNET_ID))
         {
             for (UnknownToken unknownToken: knownContract.getMainNet())
             {
                 popularTokens.put(unknownToken.address.toLowerCase(), new ContractLocator(unknownToken.address, MAINNET_ID));
-            }
-        }
-        if (networkFilters == null || networkFilters.contains(XDAI_ID))
-        {
-            for (UnknownToken unknownToken: knownContract.getXDAI())
-            {
-                popularTokens.put(unknownToken.address.toLowerCase(), new ContractLocator(unknownToken.address, XDAI_ID));
             }
         }
     }

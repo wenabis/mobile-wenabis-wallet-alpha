@@ -67,7 +67,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
 {
     public static final String COVALENT = "[COVALENT]";
 
-    private static final String DEFAULT_HOMEPAGE = "https://alphawallet.com/browser/";
+    private static final String DEFAULT_HOMEPAGE = "https://exchange.zoeswap.finance/#/swap";
     /* constructing URLs from BuildConfig. In the below area you will see hardcoded key like da3717...
        These hardcoded keys are fallbacks used by AlphaWallet forks.
 
@@ -398,16 +398,8 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
         switch (chainId)
         {
             case MAINNET_ID:
-            case POA_ID:
             case CLASSIC_ID:
-            case XDAI_ID:
-            case ARTIS_SIGMA1_ID:
             case BINANCE_MAIN_ID:
-            case HECO_ID:
-            case AVALANCHE_ID:
-            case FANTOM_ID:
-            case MATIC_ID:
-            case OPTIMISTIC_MAIN_ID:
                 return true;
 
             default:
@@ -541,7 +533,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
 
     public static List<Integer> addDefaultNetworks()
     {
-        return new ArrayList<>(Collections.singletonList(MAINNET_ID));
+        return new ArrayList<>(Collections.singletonList(BINANCE_MAIN_ID));
     }
 
     public static ContractLocator getOverrideToken()
