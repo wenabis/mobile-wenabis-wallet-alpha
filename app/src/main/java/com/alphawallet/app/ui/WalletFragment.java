@@ -148,8 +148,8 @@ public class WalletFragment extends BaseFragment implements
         if (recyclerView.getItemAnimator() != null)
             ((SimpleItemAnimator) recyclerView.getItemAnimator()).setSupportsChangeAnimations(false);
 
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new SwipeCallback(adapter));
-        itemTouchHelper.attachToRecyclerView(recyclerView);
+        /*ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new SwipeCallback(adapter));
+        itemTouchHelper.attachToRecyclerView(recyclerView);*/
 
         refreshLayout.setOnRefreshListener(this::refreshList);
         recyclerView.setRecyclerListener(holder -> adapter.onRViewRecycled(holder));
@@ -571,6 +571,7 @@ public class WalletFragment extends BaseFragment implements
         importFileName = fName;
     }
 
+/*
     public class SwipeCallback extends ItemTouchHelper.SimpleCallback {
         private TokensAdapter mAdapter;
         private Drawable icon;
@@ -664,6 +665,7 @@ public class WalletFragment extends BaseFragment implements
             icon.draw(c);
         }
     }
+*/
 
     public Wallet getCurrentWallet()
     {

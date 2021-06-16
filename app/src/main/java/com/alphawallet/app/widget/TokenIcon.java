@@ -197,6 +197,11 @@ public class TokenIcon extends ConstraintLayout
         return new IconItem(tURL, correctedAddr, token.tokenInfo.chainId);
     }
 
+    public void setTokenImage(int imageResource)
+    {
+        icon.setImageResource(imageResource);
+    }
+
     public void setStatusIcon(StatusType type)
     {
         boolean requireAnimation = statusIcon.getVisibility() == View.VISIBLE && type != currentStatus;

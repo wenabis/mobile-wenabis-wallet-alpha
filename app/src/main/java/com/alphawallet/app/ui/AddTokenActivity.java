@@ -89,6 +89,7 @@ public class AddTokenActivity extends BaseActivity implements AddressReadyCallba
     private InputView tokenType;
     private ContractType contractType;
     private boolean zeroBalanceToken = false;
+    private static final String TAG = "ActividadAgregarToken";
 
     private AWalletAlertDialog aDialog;
 
@@ -105,6 +106,8 @@ public class AddTokenActivity extends BaseActivity implements AddressReadyCallba
         symbolInputView = findViewById(R.id.input_symbol);
         decimalsInputView = findViewById(R.id.input_decimal);
         nameInputview = findViewById(R.id.input_name);
+
+        Log.v(TAG,"onCreate");
 
         contractAddress = getIntent().getStringExtra(C.EXTRA_CONTRACT_ADDRESS);
         currentNetwork = findViewById(R.id.current_network);
@@ -412,6 +415,9 @@ public class AddTokenActivity extends BaseActivity implements AddressReadyCallba
             Utils.setChainColour(networkIcon, networkInfo.chainId);
             viewModel.setPrimaryChain(chainId);
         }
+
+        Log.v(TAG,String.valueOf(chainId));
+
     }
 
     private void selectNetwork() {
