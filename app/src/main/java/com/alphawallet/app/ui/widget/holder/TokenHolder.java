@@ -132,7 +132,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
 //                issuerPlaceholder.setTextColor(getColor(getContext(),R.color.white));
 //                issuer.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
 //                contractType.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
-                tokenIcon.setTokenImage(R.mipmap.ic_launcher);
+                tokenIcon.setTokenImage(R.drawable.ic_zoe_logo);
 
                 GradientDrawable shape = new GradientDrawable();
                 shape.setShape(GradientDrawable.RECTANGLE);
