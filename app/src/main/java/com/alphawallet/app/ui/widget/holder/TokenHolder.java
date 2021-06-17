@@ -133,26 +133,6 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
 //                issuer.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
 //                contractType.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
                 tokenIcon.setTokenImage(R.drawable.ic_zoe_logo);
-
-                GradientDrawable shape = new GradientDrawable();
-                shape.setShape(GradientDrawable.RECTANGLE);
-                shape.setColor(getColor(getContext(),R.color.greyc2));
-                shape.setCornerRadius(30);
-                tokenLayout.setBackgroundDrawable(shape);
-
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                    tokenLayout.setOutlineAmbientShadowColor(getColor(getContext(),R.color.grey2));
-                }
-
-                ViewGroup.LayoutParams p = tokenLayout.getLayoutParams();
-                if (p instanceof RelativeLayout.LayoutParams) {
-                    RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams)p;
-                    lp.setMargins(3,0,3,0);
-                    tokenLayout.setLayoutParams(lp);
-                }
-
-
             }else{
                 tokenLayout.setBackgroundResource(R.drawable.background_marketplace_event);
                 tokenIcon.bindData(token, assetDefinition);
