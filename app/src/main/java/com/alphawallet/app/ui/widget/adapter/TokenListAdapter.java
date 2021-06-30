@@ -151,8 +151,10 @@ public class TokenListAdapter extends RecyclerView.Adapter<BinderViewHolder> imp
         {
             TokenSortedItem sortedItem = null;
             Token token = tokensService.getToken(tokenCardMeta.getChain(), tokenCardMeta.getAddress());
-            tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
 
+            Log.v("TokenListAdapter", tokenCardMeta.tokenId);
+            tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
+-
             if (token.tokenInfo.isEnabled)
             {
                 sortedItem = new TokenSortedItem(
@@ -433,7 +435,7 @@ public class TokenListAdapter extends RecyclerView.Adapter<BinderViewHolder> imp
         tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
         TokenSortedItem sortedItem = null;
 
-        if(token.tokenInfo.name=="ZOE"){
+        if(token.tokenInfo.name=="ZOE CASH (ZOE)"){
             token.tokenInfo.isEnabled = true;
             Log.v("TLA", "ZOE is enable now");
         }
