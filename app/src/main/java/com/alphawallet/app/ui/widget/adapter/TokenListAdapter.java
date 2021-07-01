@@ -154,7 +154,7 @@ public class TokenListAdapter extends RecyclerView.Adapter<BinderViewHolder> imp
 
             Log.v("TokenListAdapter", tokenCardMeta.tokenId);
             tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
--
+
             if (token.tokenInfo.isEnabled)
             {
                 sortedItem = new TokenSortedItem(
