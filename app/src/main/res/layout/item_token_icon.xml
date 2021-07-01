@@ -48,6 +48,7 @@
         app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
         app:layout_constraintBottom_toTopOf="@id/guidelineInnerBottom"/>
 
+
     <ImageView
         android:id="@+id/icon"
         android:layout_width="40dp"

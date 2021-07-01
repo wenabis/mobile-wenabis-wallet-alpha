@@ -72,7 +72,16 @@ public class TokenListHolder extends BinderViewHolder<TokenCardMeta> implements 
         switchEnabled.setOnCheckedChangeListener(null);
         switchEnabled.setChecked(data.isEnabled);
         switchEnabled.setOnCheckedChangeListener(this);
-        tokenIcon.bindData(token, assetDefinition);
+
+        if(token.getFullName().equals("ZOE CASH (ZOE)")) {
+//                balanceEth.setTextColor(getColor(getContext(),R.color.white));
+//                issuerPlaceholder.setTextColor(getColor(getContext(),R.color.white));
+//                issuer.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
+//                contractType.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
+            tokenIcon.setTokenImage(R.drawable.ic_zoe_logo);
+        }else{
+            tokenIcon.bindData(token, assetDefinition);
+        }
 
         if (data.isEnabled)
         {
