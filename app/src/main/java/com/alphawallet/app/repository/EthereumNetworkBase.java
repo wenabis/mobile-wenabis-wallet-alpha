@@ -67,7 +67,7 @@ public abstract class EthereumNetworkBase implements EthereumNetworkRepositoryTy
 {
     public static final String COVALENT = "[COVALENT]";
 
-    private static final String DEFAULT_HOMEPAGE = "https://exchange.zoeswap.finance/#/swap";
+    private static final String DEFAULT_HOMEPAGE = "https://zoe.cash";
     /* constructing URLs from BuildConfig. In the below area you will see hardcoded key like da3717...
        These hardcoded keys are fallbacks used by AlphaWallet forks.
 

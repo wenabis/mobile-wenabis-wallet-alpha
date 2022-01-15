@@ -62,6 +62,7 @@ public abstract class C {
     public static final String ARTIS_TAU1_SYMBOL = "ATS";
     public static final String BINANCE_SYMBOL = "BNB";
     public static final String ZOE_SYMBOL = "ZOE";
+    public static final String WENABIS_SYMBOL = "WNB";
     public static final String HECO_SYMBOL = "HT";
     public static final String FANTOM_SYMBOL = "FTM";
     public static final String AVALANCHE_SYMBOL = "AVAX";

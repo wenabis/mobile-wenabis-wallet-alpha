@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1052088722410",
-    "project_id": "io-zoewallet-alpha",
-    "storage_bucket": "io-zoewallet-alpha.appspot.com"
+    "project_number": "650022759900",
+    "project_id": "wenabis-wallet",
+    "storage_bucket": "wenabis-wallet.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1052088722410:android:c68133b8d0086e7a860893",
+        "mobilesdk_app_id": "1:650022759900:android:8688ca6057b7c9f1c2b319",
         "android_client_info": {
-          "package_name": "io.zoewallet.alpha"
+          "package_name": "io.wenabiswallet.alpha"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1052088722410-tee5g9hhh8ahjqajfcqi01lfn3ntldii.apps.googleusercontent.com",
+          "client_id": "650022759900-fvm11ld235ebv8alcrj5bffksisebfd1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBANsX7O3Lb_L-TYn4JS9I0FfScIi66bKc"
+          "current_key": "AIzaSyCBPRJUDXO8LDnh8iq-sJRT3vnR-auKjoQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1052088722410-tee5g9hhh8ahjqajfcqi01lfn3ntldii.apps.googleusercontent.com",
+              "client_id": "650022759900-fvm11ld235ebv8alcrj5bffksisebfd1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

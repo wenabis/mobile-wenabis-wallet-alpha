@@ -432,12 +432,13 @@ public class TokenListAdapter extends RecyclerView.Adapter<BinderViewHolder> imp
     public void addToken(TokenCardMeta tokenCardMeta)
     {
         Token token = tokensService.getToken(tokenCardMeta.getChain(), tokenCardMeta.getAddress());
-        tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
         TokenSortedItem sortedItem = null;
 
-        if(token.tokenInfo.name=="ZOE CASH (ZOE)"){
+        if(token.tokenInfo.name=="ZOE CASH (ZOE)" || token.tokenInfo.name=="Zoecashv2 (ZOE)"){
             token.tokenInfo.isEnabled = true;
             Log.v("TLA", "ZOE is enable now");
+        } else{
+            tokenCardMeta.isEnabled = token.tokenInfo.isEnabled;
         }
 
         Log.v("TLA", "Im in list");

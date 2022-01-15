@@ -38,7 +38,7 @@ android {
         versionCode 157
         versionName "3.33"
 
-        applicationId "io.zoewallet.alpha"
+        applicationId "io.wenabiswallet.alpha"
         minSdkVersion 23
         targetSdkVersion 30
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

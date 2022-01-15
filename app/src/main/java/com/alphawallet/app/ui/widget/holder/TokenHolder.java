@@ -127,7 +127,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
 
             Log.v("TokenHolder", token.getFullName());
 
-            if(token.getFullName().equals("ZOE CASH (ZOE)")) {
+            if(token.getFullName().equals("ZOE CASH (ZOE)") || token.getFullName().equals("Zoecashv2 (ZOE)")) {
 //                balanceEth.setTextColor(getColor(getContext(),R.color.white));
 //                issuerPlaceholder.setTextColor(getColor(getContext(),R.color.white));
 //                issuer.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
@@ -138,21 +138,29 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
                 tokenIcon.bindData(token, assetDefinition);
             }
 
-            if (EthereumNetworkRepository.isPriorityToken(token)) extendedInfo.setVisibility(View.GONE);
-            contractSeparator.setVisibility(View.GONE);
+            //if (EthereumNetworkRepository.isPriorityToken(token)) extendedInfo.setVisibility(View.GONE);
+//            contractSeparator.setVisibility(View.GONE);
 
             //setup name and value (put these together on a single string to make wrap-around text appear better).
             String nameValue = token.getStringBalance() + " " + token.getFullName(assetDefinition, token.getTicketCount());
             balanceEth.setText(nameValue);
 
-            primaryElement = false;
+
 
 //            tokenIcon.bindData(token, assetDefinition);
 //            tokenIcon.setOnTokenClickListener(onTokenClickListener);
 
             populateTicker();
 
-            setContractType();
+
+
+            if(token.getFullName().equals("ZOE CASH (ZOE)") || token.getFullName().equals("Zoecashv2 (ZOE)")) {
+//                 setContractType();
+                primaryElement = true;
+            }else{
+               // setContractType();
+                primaryElement = false;
+            }
 
             setPendingAmount();
 
@@ -314,6 +322,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
         {
             contractType.setVisibility(View.GONE);
         }
+
     }
 
     private void emptyTicker()

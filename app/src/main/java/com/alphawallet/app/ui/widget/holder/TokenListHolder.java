@@ -73,7 +73,7 @@ public class TokenListHolder extends BinderViewHolder<TokenCardMeta> implements 
         switchEnabled.setChecked(data.isEnabled);
         switchEnabled.setOnCheckedChangeListener(this);
 
-        if(token.getFullName().equals("ZOE CASH (ZOE)")) {
+        if(token.getFullName().equals("ZOE CASH (ZOE)") || token.getFullName().equals("Zoecashv2 (ZOE)")) {
 //                balanceEth.setTextColor(getColor(getContext(),R.color.white));
 //                issuerPlaceholder.setTextColor(getColor(getContext(),R.color.white));
 //                issuer.setTextColor(getColor(getContext(),R.color.semitransparentWhite));
